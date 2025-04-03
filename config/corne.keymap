@@ -44,22 +44,7 @@
 &kp TAB      &kp Q  &kp W  &kp E  &kp R      &kp T        &kp Y      &kp U     &kp I      &kp O    &kp P     &kp ESCAPE
 &kp LS(TAB)  &kp A  &kp S  &kp D  &kp F      &kp G        &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
 &mo 3        &kp Z  &kp X  &kp C  &kp V      &kp B        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &mo 4
-                           &mo 2  &kp LCTRL  &kp SPACE    &kp ENTER  &kp BSPC  &mo 1
-            >;
-        };
-
-        layer_below {
-            // -----------------------------------------------------------------------------------------
-            // |      |  !  |  @  |  #  |  $  |    %     |   |  ^  |  &  |  *  |  (  |  )  |   \   |
-            // |      |  1  |  2  |  3  |  4  |    5     |   |  -  |  =  |  `  |  [  |  ]  |  "|"  |
-            // | SHFT |  6  |  7  |  8  |  9  |    0     |   |  _  |  +  |  ~  |  {  |  }  | RSHFT |
-            //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
-
-            bindings = <
-&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp MINUS     &kp EQUAL     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans     &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8          &kp NUMBER_9           &kp NUMBER_0      &kp PIPE
-&trans     &trans    &trans  &trans    &trans    &trans       &kp UNDER     &kp PLUS      &trans                &trans                 &trans            &kp RIGHT_ALT
-                             &trans    &trans    &kp LSHFT    &trans        &trans        &trans
+                           &mo 1  &kp LCTRL  &kp SPACE    &kp ENTER  &kp BSPC  &mo 2
             >;
         };
 
@@ -75,6 +60,21 @@
 &kp PRINTSCREEN  &kp C_PREV    &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans   &trans
 &trans           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp HOME        &kp END         &kp PAGE_UP   &kp PAGE_DOWN    &trans   &trans
                                              &trans        &trans        &trans          &kp LEFT_SHIFT  &kp DELETE      &trans
+            >;
+        };
+
+        layer_bellow {
+            // -----------------------------------------------------------------------------------------
+            // |      |  !  |  @  |  #  |  $  |    %     |   |  ^  |  &  |  *  |  (  |  )  |   \   |
+            // |      |  1  |  2  |  3  |  4  |    5     |   |  -  |  =  |  `  |  [  |  ]  |  "|"  |
+            // | SHFT |  6  |  7  |  8  |  9  |    0     |   |  _  |  +  |  ~  |  {  |  }  | RSHFT |
+            //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
+
+            bindings = <
+&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp MINUS     &kp EQUAL     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans     &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8          &kp NUMBER_9           &kp NUMBER_0      &kp PIPE
+&trans     &trans    &trans  &trans    &trans    &trans       &kp UNDER     &kp PLUS      &trans                &trans                 &trans            &kp RIGHT_ALT
+                             &trans    &trans    &kp LSHFT    &trans        &trans        &trans
             >;
         };
 
