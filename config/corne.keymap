@@ -56,10 +56,10 @@
             //                    |     |     |    |                  |     |     |     |
 
             bindings = <
-&kp LEFT_CONTROL    &kp F1        &kp F2        &kp F3        &kp F4        &kp F5      &kp F6          &kp F7          &kp F8        &kp F9           &kp F10  &kp PRINTSCREEN
-&kp LC(LEFT_SHIFT)  &kp C_PREV    &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp F11  &trans
-&kp LEFT_SHIFT      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &mo 4       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp F12  &trans
-                                                &trans        &trans        &trans      &kp LEFT_ALT    &kp DELETE      &mo 3
+&kp LEFT_CONTROL    &kp F1        &kp F2        &kp F3        &kp F4        &kp F5      &kp F6          &kp F7          &kp F8            &kp F9           &kp F10  &trans
+&kp LC(LEFT_SHIFT)  &kp C_PREV    &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW      &kp RIGHT_ARROW  &kp F11  &trans
+&kp LEFT_SHIFT      &bt BT_SEL 0  &bt BT_SEL 1  &kp LEFT_WIN  &bt BT_SEL 3  &mo 3       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP       &kp END          &kp F12  &kp PRINTSCREEN
+                                                &trans        &trans        &trans      &kp LEFT_ALT    &kp DELETE      &kp LS(LEFT_ALT)
             >;
         };
 
@@ -71,28 +71,19 @@
             //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
 
             bindings = <
-&kp BACKSLASH  &kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp GRAVE       &kp CARET         &kp AMPERSAND      &kp STAR      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_CONTROL
-&trans         &kp N1     &kp N2    &kp N3     &kp N4     &kp N5          &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0           &kp LC(LEFT_SHIFT)
-&trans         &kp MINUS  &kp PLUS  &kp UNDER  &kp EQUAL  &kp PERCENT     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_WIN  &kp LS(LEFT_ALT)      &kp LC(LEFT_ALT)       &kp LEFT_SHIFT
-                                    &mo 3      &trans     &kp LEFT_ALT    &trans            &trans             &trans
-            >;
-        };
-
-        combo_keys {
-            bindings = <
-&trans  &trans          &trans            &trans        &trans        &trans    &trans  &trans        &trans        &trans            &trans          &trans
-&trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &trans    &trans  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans
-&trans  &trans          &trans            &trans        &trans        &trans    &trans  &trans        &trans        &trans            &trans          &trans
-                                          &trans        &trans        &trans    &trans  &trans        &trans
+&trans  &kp EXCL   &kp AT    &kp HASH          &kp DLLR   &kp GRAVE       &kp CARET         &kp AMPERSAND      &kp STAR      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_CONTROL
+&trans  &kp N1     &kp N2    &kp N3            &kp N4     &kp N5          &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0           &kp LC(LEFT_SHIFT)
+&trans  &kp MINUS  &kp PLUS  &kp UNDER         &kp EQUAL  &kp PERCENT     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_WIN  &kp LC(LEFT_ALT)      &kp BACKSLASH          &kp LEFT_SHIFT
+                             &kp LS(LEFT_ALT)  &trans     &kp LEFT_ALT    &trans            &trans             &trans
             >;
         };
 
         extra {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans        &trans
+                        &trans  &trans  &trans    &trans        &trans        &trans
             >;
         };
     };
