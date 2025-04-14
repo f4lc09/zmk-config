@@ -41,10 +41,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E  &kp R      &kp T        &kp Y      &kp U     &kp I      &kp O    &kp P     &kp ESCAPE
-&kp LS(TAB)     &kp A  &kp S  &kp D  &kp F      &kp G        &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V      &kp B        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_SHIFT
-                              &mo 1  &kp LCTRL  &kp SPACE    &kp ENTER  &kp BSPC  &mo 2
+&kp TAB              &kp Q  &kp W  &kp E  &kp R      &kp T        &kp Y      &kp U     &kp I      &kp O    &kp P     &kp ESCAPE
+&kp LS(TAB)          &kp A  &kp S  &kp D  &kp F      &kp G        &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
+&ht LEFT_SHIFT CAPS  &kp Z  &kp X  &kp C  &kp V      &kp B        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &ht LEFT_SHIFT CAPS
+                                   &mo 1  &kp LCTRL  &kp SPACE    &kp ENTER  &kp BSPC  &mo 2
             >;
         };
 
@@ -56,7 +56,7 @@
             //                    |     |     |    |                  |     |     |     |
 
             bindings = <
-&kp LEFT_CONTROL    &kp F1           &kp F2            &kp F3        &kp F4            &kp F5      &kp F6          &kp F7          &kp F8            &kp F9           &kp F10  &trans
+&kp LCTRL           &kp F1           &kp F2            &kp F3        &kp F4            &kp F5      &kp F6          &kp F7          &kp F8            &kp F9           &kp F10  &trans
 &kp LC(LEFT_SHIFT)  &kp C_PREV       &kp C_NEXT        &kp C_VOL_DN  &kp C_VOL_UP      &kp C_PP    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW      &kp RIGHT_ARROW  &kp F11  &trans
 &kp LEFT_SHIFT      &kp PRINTSCREEN  &kp LC(LEFT_ALT)  &kp LEFT_WIN  &kp LA(LEFT_WIN)  &mo 3       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP       &kp END          &kp F12  &trans
                                                        &trans        &trans            &trans      &kp LEFT_ALT    &kp DELETE      &kp LS(LEFT_ALT)
@@ -71,10 +71,10 @@
             //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
 
             bindings = <
-&trans  &kp EXCL   &kp AT    &kp HASH          &kp DLLR   &kp GRAVE       &kp CARET         &kp AMPERSAND      &kp STAR      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_CONTROL
-&trans  &kp N1     &kp N2    &kp N3            &kp N4     &kp N5          &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0           &kp LC(LEFT_SHIFT)
-&trans  &kp MINUS  &kp PLUS  &kp UNDER         &kp EQUAL  &kp PERCENT     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_WIN  &kp LC(LEFT_ALT)      &kp BACKSLASH          &kp LEFT_SHIFT
-                             &kp LS(LEFT_ALT)  &trans     &kp LEFT_ALT    &trans            &trans             &trans
+&kp LA(TAB)      &kp EXCL   &kp AT    &kp HASH          &kp DLLR   &kp GRAVE       &kp CARET         &kp AMPERSAND      &kp STAR      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_CONTROL
+&kp LA(LS(TAB))  &kp N1     &kp N2    &kp N3            &kp N4     &kp N5          &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0           &kp LC(LEFT_SHIFT)
+&trans           &kp MINUS  &kp PLUS  &kp UNDER         &kp EQUAL  &kp PERCENT     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_WIN  &kp LC(LEFT_ALT)      &kp BACKSLASH          &kp LEFT_SHIFT
+                                      &kp LS(LEFT_ALT)  &trans     &kp LEFT_ALT    &trans            &trans             &trans
             >;
         };
 
