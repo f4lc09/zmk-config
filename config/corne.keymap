@@ -32,6 +32,7 @@
                 <&kp GRAVE &kp GRAVE &kp GRAVE &kp LS(ENTER) &kp LS(ENTER) &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW>;
 
             label = "CODE_BLOCK";
+            wait-ms = <5>;
         };
     };
 
