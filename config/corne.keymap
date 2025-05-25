@@ -23,6 +23,18 @@
 
     combos { compatible = "zmk,combos"; };
 
+    macros {
+        code_block: code_block {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(ENTER) &kp LS(ENTER) &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW>;
+
+            label = "CODE_BLOCK";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -66,7 +78,7 @@
             bindings = <
 &trans  &kp EXCL   &kp AT    &kp HASH          &kp DLLR   &kp GRAVE         &kp CARET         &kp AMPERSAND      &kp STAR      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_CONTROL
 &trans  &kp N1     &kp N2    &kp N3            &kp N4     &kp N5            &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0           &kp LC(LEFT_SHIFT)
-&trans  &kp MINUS  &kp PLUS  &kp UNDER         &kp EQUAL  &kp PERCENT       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_WIN  &kp LC(LEFT_ALT)      &kp BACKSLASH          &kp LEFT_SHIFT
+&trans  &kp MINUS  &kp PLUS  &kp UNDER         &kp EQUAL  &code_block       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_WIN  &kp LC(LEFT_ALT)      &kp BACKSLASH          &kp LEFT_SHIFT
                              &kp LS(LEFT_ALT)  &trans     &kp LEFT_SHIFT    &trans            &trans             &trans
             >;
         };
