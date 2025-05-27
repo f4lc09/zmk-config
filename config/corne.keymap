@@ -34,6 +34,13 @@
             label = "CODE_BLOCK";
             wait-ms = <5>;
         };
+
+        go_assignment: go_assignment {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp COLON &kp EQUAL &kp SPACE>;
+            label = "GO_ASSIGNMENT";
+        };
     };
 
     keymap {
@@ -113,10 +120,10 @@
 
         macro {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &code_block    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans         &trans  &trans  &trans
+&trans  &go_assignment  &trans  &trans  &trans  &code_block    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans         &trans  &trans  &trans
             >;
         };
     };
