@@ -36,12 +36,12 @@
 
         go_assignment {
             bindings = <&go_assignment>;
-            key-positions = <22 28>;
+            key-positions = <28 38 39>;
         };
 
         code_block {
             bindings = <&code_block>;
-            key-positions = <5 39>;
+            key-positions = <5 39 38>;
         };
     };
 
