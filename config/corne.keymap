@@ -160,10 +160,10 @@
 
         control_keys {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans  &trans            &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans  &trans            &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans  &trans            &trans  &trans  &trans
-                        &mo 2   &trans  &trans    &kp LEFT_ALT  &trans  &kp LC(LEFT_ALT)
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans            &trans  &trans  &trans  &trans
+                        &mo 2   &trans  &trans    &kp LEFT_ALT  &kp LC(LEFT_ALT)  &trans
             >;
         };
 
