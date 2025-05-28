@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_PREFERRED";
             #binding-cells = <2>;
-            tapping-term-ms = <120>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -23,42 +23,27 @@
         ll: ll {
             compatible = "zmk,behavior-hold-tap";
             label = "LL";
-            bindings = <&mo>, <&sl>;
+            bindings = <&mo>, <&to>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             retro-tap;
-        };
-
-        has: has {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HAS";
-            bindings = <&kp>, <&sk>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        alt_to: alt_to {
-            compatible = "zmk,behavior-hold-tap";
-            label = "ALT_TO";
-            bindings = <&alt_hold_to>, <&alt_sk_to>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        ctrl_to: ctrl_to {
-            compatible = "zmk,behavior-hold-tap";
-            label = "CTRL_TO";
-            bindings = <&ctrl_hold_to>, <&ctrl_sk_to>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        go_assignment {
+            bindings = <&go_assignment>;
+            key-positions = <22 28>;
+        };
+
+        code_block {
+            bindings = <&code_block>;
+            key-positions = <5 39>;
+        };
+    };
 
     macros {
         code_block: code_block {
@@ -128,25 +113,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp TAB      &kp Q  &kp W  &kp E    &kp R           &kp T        &kp Y      &kp U     &kp I      &kp O    &kp P     &kp ESCAPE
-&kp LS(TAB)  &kp A  &kp S  &kp D    &kp F           &kp G        &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
-&kp LCTRL    &kp Z  &kp X  &kp C    &kp V           &kp B        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &ch_lang
-                           &ll 1 6  &kp LEFT_SHIFT  &kp SPACE    &kp ENTER  &kp BSPC  &mo 2
-            >;
-        };
-
-        numbers {
-            // -----------------------------------------------------------------------------------------
-            // |      |  !  |  @  |  #  |  $  |    %     |   |  ^  |  &  |  *  |  (  |  )  |   \   |
-            // |      |  1  |  2  |  3  |  4  |    5     |   |  -  |  =  |  `  |  [  |  ]  |  "|"  |
-            // | SHFT |  6  |  7  |  8  |  9  |    0     |   |  _  |  +  |  ~  |  {  |  }  | RSHFT |
-            //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
-
-            bindings = <
-&mo 3   &kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp GRAVE      &kp CARET         &kp AMPERSAND      &kp STAR        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &to 4
-&trans  &kp N1     &kp N2    &kp N3     &kp N4     &kp N5         &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9          &kp NUMBER_0           &trans
-&trans  &kp MINUS  &kp PLUS  &kp UNDER  &kp EQUAL  &kp PERCENT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH          &trans
-                             &trans     &trans     &trans         &trans            &trans             &trans
+&kp TAB      &kp Q  &kp W  &kp E  &kp R      &kp T        &kp Y                     &kp U     &kp I           &kp O    &kp P     &kp ESCAPE
+&kp LS(TAB)  &kp A  &kp S  &kp D  &kp F      &kp G        &kp H                     &kp J     &kp K           &kp L    &kp SEMI  &kp SINGLE_QUOTE
+&ch_lang     &kp Z  &kp X  &kp C  &kp V      &kp B        &kp N                     &kp M     &kp COMMA       &kp DOT  &kp FSLH  &mo 3
+                           &mo 1  &kp LCTRL  &kp SPACE    &mt LC(LEFT_SHIFT) ENTER  &kp BSPC  &kp LEFT_SHIFT
             >;
         };
 
@@ -158,10 +128,34 @@
             //                    |     |     |    |                  |     |     |     |
 
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4        &kp F5            &kp F6             &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOL_UP  &kp C_NEXT       &kp C_PLAY_PAUSE  &trans
-&kp F7  &kp F8  &kp F9  &kp F10       &kp F11           &kp F12            &kp LEFT_ARROW  &kp DOWN_ARROW     &kp UP_ARROW  &kp RIGHT_ARROW  &trans            &trans
-&trans  &trans  &trans  &trans        &trans            &trans             &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP   &kp END          &trans            &trans
-                        &kp LEFT_WIN  &kp LA(LEFT_WIN)  &kp PRINTSCREEN    &trans          &kp DELETE         &trans
+&kp LA(TAB)      &kp F1   &kp F2   &kp F3        &kp F4            &kp F5     &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOL_UP  &kp C_NEXT       &kp C_PLAY_PAUSE  &to 5
+&kp LS(LA(TAB))  &kp F6   &kp F7   &kp F8        &kp F9            &kp F10    &kp LEFT_ARROW  &kp DOWN_ARROW     &kp UP_ARROW  &kp RIGHT_ARROW  &trans            &trans
+&kp PRINTSCREEN  &kp F11  &kp F12  &kp LEFT_WIN  &kp LA(LEFT_WIN)  &mo 4      &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP   &kp END          &trans            &trans
+                                   &trans        &trans            &trans     &trans          &kp DELETE         &trans
+            >;
+        };
+
+        numbers {
+            // -----------------------------------------------------------------------------------------
+            // |      |  !  |  @  |  #  |  $  |    %     |   |  ^  |  &  |  *  |  (  |  )  |   \   |
+            // |      |  1  |  2  |  3  |  4  |    5     |   |  -  |  =  |  `  |  [  |  ]  |  "|"  |
+            // | SHFT |  6  |  7  |  8  |  9  |    0     |   |  _  |  +  |  ~  |  {  |  }  | RSHFT |
+            //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
+
+            bindings = <
+&trans  &kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp GRAVE      &kp CARET         &kp AMPERSAND      &kp STAR        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &kp N1     &kp N2    &kp N3     &kp N4     &kp N5         &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9          &kp NUMBER_0           &trans
+&trans  &kp MINUS  &kp PLUS  &kp UNDER  &kp EQUAL  &kp PERCENT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH          &trans
+                             &trans     &trans     &trans         &trans            &trans             &trans
+            >;
+        };
+
+        control_keys {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans     &trans            &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans     &trans            &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans     &trans            &trans  &trans  &trans
+                        &mo 2   &trans  &trans    &kp LEFT_ALT  &kp LCTRL  &kp LC(LEFT_ALT)
             >;
         };
 
@@ -178,8 +172,8 @@
             bindings = <
 &kp TAB       &kp NUMBER_1    &kp Q  &kp W  &kp E      &kp R        &kp Y      &kp U     &kp I      &kp O    &kp P     &kp ESCAPE
 &kp NUMBER_3  &kp NUMBER_2    &kp A  &kp S  &kp D      &kp F        &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
-&kp NUMBER_4  &kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &tp LEFT_SHIFT CAPS
-                                     &mo 5  &kp LCTRL  &kp SPACE    &kp ENTER  &kp BSPC  &mo 1
+&kp NUMBER_4  &kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &trans
+                                     &mo 6  &kp LCTRL  &kp SPACE    &kp ENTER  &kp BSPC  &mo 2
             >;
         };
 
@@ -191,14 +185,19 @@
                                     &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
+    };
 
-        macro {
-            bindings = <
-&trans  &go_assignment  &trans  &trans       &trans  &code_block    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans  &trans       &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans  &trans       &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans
-                                &alt_to 0 0  &trans  &trans         &trans  &trans  &trans
-            >;
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        control_keys_above_commands {
+            if-layers = <1 3>;
+            then-layer = <3>;
+        };
+
+        control_keys_above_numbers {
+            if-layers = <2 3>;
+            then-layer = <3>;
         };
     };
 };
