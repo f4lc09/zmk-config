@@ -196,10 +196,10 @@
 
         control_keys {
             bindings = <
-&trans  &trans  &trans  &trans              &trans  &trans          &trans              &trans  &trans            &trans  &trans  &trans
-&trans  &trans  &trans  &trans              &trans  &trans          &trans              &trans  &trans            &trans  &trans  &trans
-&trans  &trans  &trans  &trans              &trans  &trans          &trans              &trans  &trans            &trans  &trans  &trans
-                        &kp LC(LEFT_SHIFT)  &trans  &kp LC(LALT)    &kp LC(LEFT_SHIFT)  &trans  &kp LC(LEFT_ALT)
+&trans  &trans  &trans  &trans  &trans              &trans          &trans              &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans              &trans          &trans              &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans              &trans          &trans              &trans            &trans  &trans  &trans  &trans
+                        &trans  &kp LC(LEFT_SHIFT)  &kp LC(LALT)    &kp LC(LEFT_SHIFT)  &kp LC(LEFT_ALT)  &trans
             >;
         };
     };
