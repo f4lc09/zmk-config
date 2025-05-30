@@ -16,10 +16,19 @@
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_PREFERRED";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+
+        tp_with_layer: tp_with_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TP_WITH_LAYER";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
         };
     };
 
@@ -36,9 +45,19 @@
             key-positions = <5 39 38>;
         };
 
-        ctrl_del {
-            bindings = <&kp LC(DELETE)>;
-            key-positions = <27 40>;
+        toggle_gaming {
+            bindings = <&tog 4>;
+            key-positions = <36 37>;
+        };
+
+        sticky_bluetooth {
+            bindings = <&sl 6>;
+            key-positions = <41 40>;
+        };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 36>;
         };
     };
 
@@ -61,49 +80,11 @@
             label = "GO_ASSIGNMENT";
         };
 
-        alt_sk_to: alt_sk_to {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LEFT_ALT &to 0>;
-            label = "ALT_SK_TO";
-        };
-
-        alt_hold_to: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LEFT_ALT &to 0>, <&macro_press>;
-
-            label = "NEW_MACRO";
-        };
-
-        ctrl_sk_to: ctrl_sk_to {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LCTRL &to 0>;
-            label = "CTRL_SK_TO";
-        };
-
-        ctrl_hold_to: ctrl_hold_to {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LCTRL &to 0>, <&macro_press>;
-
-            label = "CTRL_HOLD_TO";
-        };
-
         ch_lang: change_lang {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(LEFT_SHIFT)>;
             label = "CHANGE_LANG";
-        };
-
-        release_layer: release_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_release>, <&to 0>, <&macro_release>;
-
-            label = "RELEASE_LAYER";
         };
     };
 
@@ -118,25 +99,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp TAB      &kp Q  &kp W  &kp E  &kp R      &kp T                 &kp Y                 &kp U     &kp I      &kp O    &kp P     &kp ESCAPE
-&kp LS(TAB)  &kp A  &kp S  &kp D  &kp F      &kp G                 &kp H                 &kp J     &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
-&mo 6        &kp Z  &kp X  &kp C  &kp V      &kp B                 &kp N                 &kp M     &kp COMMA  &kp DOT  &kp FSLH  &ch_lang
-                           &mo 1  &kp LCTRL  &tp LEFT_ALT SPACE    &tp LEFT_SHIFT ENTER  &kp BSPC  &mo 2
-            >;
-        };
-
-        commands {
-            // -----------------------------------------------------------------------------------------
-            // |       |  F1  |  F2  |  F3  |  F4  |  F5 |            |  F6  |  F7  |  F8  |  F9  |  F10  |   |
-            // |       | Prev | Next | Vol - | Vol + | Play/Pause |   |      | LFT | DWN |  UP | RGT |     |     |
-            // | BTCLR | BT1 | BT2 | BT3 | BT4 | BT5 |   |            |     |     |     |     |     |     |
-            //                    |     |     |    |                  |     |     |     |
-
-            bindings = <
-&trans  &kp F1          &kp F2           &kp F3        &kp F4            &kp F5              &kp F6          &kp F7            &kp F8        &kp F9           &kp F10  &to 4
-&trans  &kp C_PREVIOUS  &kp C_NEXT       &kp C_VOL_DN  &kp C_VOL_UP      &kp C_PLAY_PAUSE    &kp LEFT_ARROW  &kp DOWN_ARROW    &kp UP_ARROW  &kp RIGHT_ARROW  &kp F11  &trans
-&trans  &trans          &kp PRINTSCREEN  &kp LEFT_WIN  &kp LA(LEFT_WIN)  &mo 3               &kp HOME        &kp PAGE_DOWN     &kp PAGE_UP   &kp END          &kp F12  &trans
-                                         &trans        &trans            &trans              &trans          &mt LCTRL DELETE  &kp LEFT_ALT
+&kp TAB      &kp Q  &kp W  &kp E           &kp R      &kp T                 &kp Y      &kp U                       &kp I      &kp O    &kp P     &kp DELETE
+&kp LS(TAB)  &kp A  &kp S  &kp D           &kp F      &kp G                 &kp H      &kp J                       &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
+&mo 3        &kp Z  &kp X  &kp C           &kp V      &kp B                 &kp N      &kp M                       &kp COMMA  &kp DOT  &kp FSLH  &ch_lang
+                           &kp LEFT_SHIFT  &kp LCTRL  &tp LEFT_ALT SPACE    &kp ENTER  &tp_with_layer 2 BACKSPACE  &mo 1
             >;
         };
 
@@ -148,28 +114,43 @@
             //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
 
             bindings = <
-&trans  &kp EXCL   &kp AT    &kp HASH        &kp DLLR   &kp GRAVE      &kp CARET         &kp AMPERSAND      &kp STAR        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans  &kp N1     &kp N2    &kp N3          &kp N4     &kp N5         &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9          &kp NUMBER_0           &trans
-&trans  &kp MINUS  &kp PLUS  &kp UNDER       &kp EQUAL  &kp PERCENT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH          &trans
-                             &kp LEFT_SHIFT  &trans     &trans         &trans            &trans             &trans
+&trans  &kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp GRAVE      &kp CARET         &kp AMPERSAND      &kp STAR        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ESCAPE
+&trans  &kp N1     &kp N2    &kp N3     &kp N4     &kp N5         &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9          &kp NUMBER_0           &trans
+&trans  &kp MINUS  &kp PLUS  &kp UNDER  &kp EQUAL  &kp PERCENT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH          &trans
+                             &trans     &trans     &trans         &trans            &trans             &trans
             >;
         };
 
-        bluetooth {
+        commands {
+            // -----------------------------------------------------------------------------------------
+            // |       |  F1  |  F2  |  F3  |  F4  |  F5 |            |  F6  |  F7  |  F8  |  F9  |  F10  |   |
+            // |       | Prev | Next | Vol - | Vol + | Play/Pause |   |      | LFT | DWN |  UP | RGT |     |     |
+            // | BTCLR | BT1 | BT2 | BT3 | BT4 | BT5 |   |            |     |     |     |     |     |     |
+            //                    |     |     |    |                  |     |     |     |
+
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans        &trans
-                        &trans  &trans  &trans    &trans        &trans        &trans
+&trans  &kp F1           &kp F2                &kp F3        &kp F4            &kp F5                  &kp F6          &kp F7          &kp F8        &kp F9           &kp F10  &trans
+&trans  &kp C_PREVIOUS   &kp C_NEXT            &kp C_VOL_DN  &kp C_VOL_UP      &kp C_PLAY_PAUSE        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp F11  &trans
+&trans  &kp PRINTSCREEN  &kp C_BRIGHTNESS_DEC  &kp LEFT_GUI  &kp LA(LEFT_GUI)  &kp C_BRIGHTNESS_INC    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp F12  &trans
+                                               &trans        &trans            &trans                  &trans          &trans          &trans
+            >;
+        };
+
+        control_keys {
+            bindings = <
+&trans  &trans  &trans  &trans              &trans            &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans              &trans            &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans              &trans            &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &kp LC(LEFT_SHIFT)  &kp LC(LEFT_ALT)  &trans    &trans  &trans  &trans
             >;
         };
 
         gaming {
             bindings = <
-&kp TAB       &kp NUMBER_1    &kp Q  &kp W  &kp E      &kp R        &kp Y      &kp U     &kp I      &kp O    &kp P     &kp ESCAPE
-&kp NUMBER_3  &kp NUMBER_2    &kp A  &kp S  &kp D      &kp F        &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
-&kp NUMBER_4  &kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &trans
-                                     &mo 5  &kp LCTRL  &kp SPACE    &kp ENTER  &kp BSPC  &mo 2
+&kp TAB       &kp NUMBER_1    &kp Q  &kp W  &kp E      &kp R        &trans  &trans  &trans  &trans  &trans  &trans
+&kp NUMBER_3  &kp NUMBER_2    &kp A  &kp S  &kp D      &kp F        &trans  &trans  &trans  &trans  &trans  &trans
+&kp NUMBER_4  &kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V        &trans  &trans  &trans  &trans  &trans  &trans
+                                     &mo 5  &kp LCTRL  &kp SPACE    &trans  &trans  &trans
             >;
         };
 
@@ -182,46 +163,15 @@
             >;
         };
 
-        conditional {
+        bluetooth {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        control_keys {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans              &trans          &trans              &trans            &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans              &trans          &trans              &trans            &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans              &trans          &trans              &trans            &trans  &trans  &trans  &trans
-                        &trans  &kp LC(LEFT_SHIFT)  &kp LC(LALT)    &kp LC(LEFT_SHIFT)  &kp LC(LEFT_ALT)  &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans        &trans        &trans          &trans  &trans  &trans
             >;
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        controls_above {
-            if-layers = <1 6>;
-            then-layer = <7>;
-        };
-
-        controls_above_2 {
-            if-layers = <2 6>;
-            then-layer = <7>;
-        };
-
-        controls_above_3 {
-            if-layers = <1 2 6>;
-            then-layer = <7>;
-        };
-
-        controls {
-            if-layers = <6>;
-            then-layer = <7>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
