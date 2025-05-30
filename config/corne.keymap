@@ -31,16 +31,6 @@
             flavor = "tap-preferred";
             bindings = <&alt_toctrllayer>, <&kp>;
         };
-
-        tp_ctrlalt_ctrllayer: tp_ctrlalt_ctrllayer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TP_CTRLALT_CTRLLAYER";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&ctrlalt_toctrllayer>, <&kp>;
-        };
     };
 
     combos {
