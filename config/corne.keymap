@@ -31,6 +31,16 @@
             flavor = "tap-preferred";
             bindings = <&alt_toctrllayer>, <&kp>;
         };
+
+        tp_ctrlalt_ctrllayer: tp_ctrlalt_ctrllayer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TP_CTRLALT_CTRLLAYER";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&ctrlalt_toctrllayer>, <&kp>;
+        };
     };
 
     combos {
@@ -113,6 +123,32 @@
 
             label = "CTRL_TOALTLAYER";
         };
+
+        ctrlshift_toctrllayer: ctrlshift_toctrllayer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LEFT_SHIFT &mo 7>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &mo 7 &kp LCTRL>;
+
+            label = "CTRLSHIFT_TOCTRLLAYER";
+        };
+
+        ctrlalt_toctrllayer: ctrlalt_toctrllayer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LEFT_ALT &mo 7>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LEFT_ALT &mo 7 &kp LCTRL>;
+
+            label = "CTRLALT_TOCTRLLAYER";
+        };
     };
 
     keymap {
@@ -165,10 +201,10 @@
 
         control_keys {
             bindings = <
-&trans  &trans  &trans  &trans              &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans              &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans              &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-                        &kp LC(LEFT_SHIFT)  &trans  &kp LC(LEFT_ALT)    &trans  &trans  &trans
+&trans  &trans  &trans  &trans                  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                        &ctrlshift_toctrllayer  &trans  &ctrlalt_toctrllayer    &trans  &trans  &trans
             >;
         };
 
@@ -192,8 +228,8 @@
 
         bluetooth {
             bindings = <
-&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+&sys_reset  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans        &trans        &trans          &trans  &trans  &trans
             >;
