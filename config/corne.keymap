@@ -182,10 +182,10 @@
 
         control_keys {
             bindings = <
-&trans  &trans  &trans     &trans                  &trans               &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mkp RCLK  &mkp LCLK               &trans               &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans                  &trans               &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                           &ctrlshift_toctrllayer  &ctrlalt_toaltlayer  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans                  &trans               &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &mkp RCLK               &mkp LCLK            &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                  &trans               &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &ctrlshift_toctrllayer  &ctrlalt_toaltlayer  &trans    &trans  &trans  &trans
             >;
         };
 
