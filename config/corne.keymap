@@ -160,7 +160,12 @@
         ctrl_ml: ctrl_ml {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LCTRL &mkp LCLK>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &mkp LCLK>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LCTRL &mkp LCLK>;
 
             label = "CTRL_ML";
         };
@@ -168,7 +173,12 @@
         ctrl_mr: ctrl_mr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LCTRL &mkp RCLK>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &mkp RCLK>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LCTRL &mkp RCLK>;
 
             label = "CTRL_MR";
         };
@@ -176,7 +186,12 @@
         ctrl_mm: ctrl_mm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LCTRL &mkp MCLK>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &mkp MCLK>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LCTRL &mkp MCLK>;
 
             label = "CTRL_MM";
         };
