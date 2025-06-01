@@ -22,16 +22,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-
-        ll: ll {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LL";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "balanced";
-            bindings = <&mo>, <&to>;
-        };
     };
 
     combos {
@@ -159,6 +149,30 @@
 
             label = "CTRLALT_TOALTLAYER";
         };
+
+        ctrl_ml: ctrl_ml {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&kp LCTRL &mkp LCLK>;
+
+            label = "CTRL_ML";
+        };
+
+        ctrl_mr: ctrl_mr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&kp LCTRL &mkp RCLK>;
+
+            label = "CTRL_MR";
+        };
+
+        ctrl_mm: ctrl_mm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&kp LCTRL &mkp MCLK>;
+
+            label = "CTRL_MM";
+        };
     };
 
     keymap {
@@ -172,10 +186,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp TAB      &kp Q  &kp W  &kp E               &kp R             &kp T                 &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BACKSPACE
-&kp LS(TAB)  &kp A  &kp S  &kp D               &kp F             &kp G                 &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
-&ll 3 9      &kp Z  &kp X  &kp C               &kp V             &kp B                 &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &ch_lang
-                           &shift_toctrllayer  &ctrl_toaltlayer  &tp LEFT_ALT SPACE    &kp ENTER  &mo 2  &mo 1
+&kp TAB      &kp Q    &kp W  &kp E               &kp R             &kp T                 &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BACKSPACE
+&kp LS(TAB)  &lt 9 A  &kp S  &kp D               &kp F             &kp G                 &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
+&mo 3        &kp Z    &kp X  &kp C               &kp V             &kp B                 &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &ch_lang
+                             &shift_toctrllayer  &ctrl_toaltlayer  &tp LEFT_ALT SPACE    &kp ENTER  &mo 2  &mo 1
             >;
         };
 
@@ -267,8 +281,8 @@
             bindings = <
 &trans  &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&to 0   &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &mkp MCLK  &mkp RCLK  &mkp LCLK    &trans  &trans  &trans
+&trans  &trans  &trans  &ctrl_mm   &ctrl_ml   &ctrl_mr     &trans  &trans  &trans  &trans  &trans  &trans
+                        &mkp MCLK  &mkp LCLK  &mkp RCLK    &trans  &trans  &trans
             >;
         };
     };
