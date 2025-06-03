@@ -11,6 +11,11 @@
 
 &mt { tapping-term-ms = <80>; };
 
+&lt {
+    flavor = "hold-preferred";
+    tapping-term-ms = <150>;
+};
+
 / {
     behaviors {
         tp: tap_preferred {
