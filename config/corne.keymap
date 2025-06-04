@@ -9,11 +9,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&mt { tapping-term-ms = <80>; };
-
 &lt {
     flavor = "hold-preferred";
-    tapping-term-ms = <150>;
+    tapping-term-ms = <100>;
 };
 
 / {
@@ -77,7 +75,7 @@
         };
 
         mouse {
-            bindings = <&mo 10>;
+            bindings = <&mo 9>;
             key-positions = <13 38>;
             slow-release;
             layers = <0>;
@@ -218,10 +216,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp TAB        &kp Q    &kp W  &kp E               &kp R             &kp T                 &kp Y          &kp U         &kp I        &kp O    &kp P     &kp ESCAPE
-&lt 9 LS(TAB)  &lt 9 A  &kp S  &kp D               &kp F             &kp G                 &kp H          &kp J         &kp K        &kp L    &kp SEMI  &kp SINGLE_QUOTE
-&mo 3          &kp Z    &kp X  &kp C               &kp V             &kp B                 &kp N          &kp M         &kp COMMA    &kp DOT  &kp FSLH  &ch_lang
-                               &shift_toctrllayer  &ctrl_toaltlayer  &tp LEFT_ALT SPACE    &kp BACKSPACE  &lt 1 DELETE  &lt 2 ENTER
+&kp TAB        &kp Q  &kp W  &kp E               &kp R             &kp T                 &kp Y          &kp U         &kp I        &kp O    &kp P     &kp ESCAPE
+&lt 9 LS(TAB)  &kp A  &kp S  &kp D               &kp F             &kp G                 &kp H          &kp J         &kp K        &kp L    &kp SEMI  &kp SINGLE_QUOTE
+&mo 3          &kp Z  &kp X  &kp C               &kp V             &kp B                 &kp N          &kp M         &kp COMMA    &kp DOT  &kp FSLH  &ch_lang
+                             &shift_toctrllayer  &ctrl_toaltlayer  &tp LEFT_ALT SPACE    &kp BACKSPACE  &lt 1 DELETE  &lt 2 ENTER
             >;
         };
 
@@ -309,21 +307,12 @@
             >;
         };
 
-        mouse_activator {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&mo 10  &mo 10  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
         mouse {
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mkp MCLK  &mkp LCLK  &mkp RCLK  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans     &trans     &trans    &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans     &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
