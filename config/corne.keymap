@@ -42,7 +42,7 @@
 
         go_assignment {
             bindings = <&go_assignment>;
-            key-positions = <28 13 17 9>;
+            key-positions = <13 17 9>;
         };
 
         code_block {
