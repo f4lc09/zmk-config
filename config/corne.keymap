@@ -42,12 +42,12 @@
 
         go_assignment {
             bindings = <&go_assignment>;
-            key-positions = <28 38 39>;
+            key-positions = <28 13 17 9>;
         };
 
         code_block {
             bindings = <&code_block>;
-            key-positions = <5 39 38>;
+            key-positions = <5 7 6>;
         };
 
         toggle_gaming {
@@ -94,6 +94,11 @@
         ctrl_s {
             bindings = <&kp LC(S)>;
             key-positions = <37 14>;
+        };
+
+        space_back {
+            bindings = <&space_back>;
+            key-positions = <38 39>;
         };
     };
 
@@ -212,6 +217,13 @@
                 <&kp LCTRL &mkp MCLK>;
 
             label = "CTRL_MM";
+        };
+
+        space_back: space_back {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp LEFT_ARROW>;
+            label = "SPACE_BACK";
         };
     };
 
