@@ -85,7 +85,7 @@
         };
 
         mouse {
-            bindings = <&mo 9>;
+            bindings = <&mo 0>;
             key-positions = <13 38>;
             slow-release;
             layers = <0>;
@@ -368,15 +368,6 @@
 &trans        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &fast_kt_alt  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                               &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        mouse {
-            bindings = <
-&trans  &trans     &trans     &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans     &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans     &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
