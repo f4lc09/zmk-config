@@ -36,11 +36,11 @@
             flavor = "tap-preferred";
         };
 
-        a_mouse: a_mouse {
+        z_mouse: z_mouse {
             compatible = "zmk,behavior-tap-dance";
-            label = "A_MOUSE";
+            label = "Z_MOUSE";
             #binding-cells = <0>;
-            bindings = <&kp A>, <&mo 9>;
+            bindings = <&kp Z>, <&mo 9>;
 
             tapping-term-ms = <350>;
         };
@@ -238,8 +238,8 @@
 
             bindings = <
 &kp TAB      &kp Q     &kp W  &kp E        &kp R             &kp T        &kp Y          &kp U         &kp I      &kp O    &kp P     &kp ESCAPE
-&kp LS(TAB)  &a_mouse  &kp S  &kp D        &kp F             &kp G        &kp H          &kp J         &kp K      &kp L    &kp SEMI  &kp ENTER
-&mo 3        &kp Z     &kp X  &kp C        &kp V             &kp B        &kp N          &kp M         &kp COMMA  &kp DOT  &kp FSLH  &ch_lang
+&kp LS(TAB)  &kp A     &kp S  &kp D        &kp F             &kp G        &kp H          &kp J         &kp K      &kp L    &kp SEMI  &kp ENTER
+&mo 3        &z_mouse  &kp X  &kp C        &kp V             &kp B        &kp N          &kp M         &kp COMMA  &kp DOT  &kp FSLH  &ch_lang
                               &shift_caps  &ctrl_toaltlayer  &kp SPACE    &kp BACKSPACE  &lt 1 DELETE  &mo 2
             >;
         };
@@ -313,8 +313,8 @@
         ctrl {
             bindings = <
 &trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans         &kp A   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&fast_kt_ctrl  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&fast_kt_ctrl  &kp Z   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                                &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
