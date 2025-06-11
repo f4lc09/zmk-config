@@ -139,6 +139,7 @@
                 <&kp LEFT_SHIFT &mo 7 &kp LCTRL &kp LEFT_ALT>;
 
             label = "SHIFT_TOCTRLLAYER";
+            wait-ms = <0>;
         };
 
         ctrlshift_toctrllayer: ctrlshift_toctrllayer {
@@ -152,6 +153,7 @@
                 <&kp LEFT_SHIFT &mo 7 &kp LCTRL &kp LEFT_ALT>;
 
             label = "CTRLSHIFT_TOCTRLLAYER";
+            wait-ms = <0>;
         };
 
         ctrl_toaltlayer: ctrl_toaltlayer {
@@ -165,6 +167,7 @@
                 <&kp LCTRL &mo 8 &kp LEFT_ALT>;
 
             label = "CTRL_TOALTLAYER";
+            wait-ms = <0>;
         };
 
         ctrlalt_toaltlayer: ctrlalt_toaltlayer {
@@ -178,51 +181,13 @@
                 <&kp LCTRL &mo 8 &kp LEFT_ALT>;
 
             label = "CTRLALT_TOALTLAYER";
-        };
-
-        ctrl_ml: ctrl_ml {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &mkp LCLK>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LCTRL &mkp LCLK>;
-
-            label = "CTRL_ML";
-        };
-
-        ctrl_mr: ctrl_mr {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &mkp RCLK>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LCTRL &mkp RCLK>;
-
-            label = "CTRL_MR";
-        };
-
-        ctrl_mm: ctrl_mm {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &mkp MCLK>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LCTRL &mkp MCLK>;
-
-            label = "CTRL_MM";
+            wait-ms = <0>;
         };
 
         space_back: space_back {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SPACE &kp LEFT_ARROW>;
+            bindings = <&kp LS(ENTER) &kp UP_ARROW>;
             label = "SPACE_BACK";
         };
 
