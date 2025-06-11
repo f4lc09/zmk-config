@@ -294,7 +294,7 @@
 
         extra_gaming {
             bindings = <
-&trans        &kp NUMBER_5  &kp N   &trans  &kp M   &kp T     &trans  &trans  &trans  &trans  &trans  &to 0
+&kp ESCAPE    &kp NUMBER_5  &kp N   &trans  &kp M   &kp T     &trans  &trans  &trans  &trans  &trans  &trans
 &kp NUMBER_7  &kp NUMBER_6  &trans  &trans  &trans  &kp G     &trans  &trans  &trans  &trans  &trans  &trans
 &kp NUMBER_8  &trans        &kp Y   &kp U   &kp I   &kp B     &trans  &trans  &trans  &trans  &trans  &trans
                                     &trans  &trans  &trans    &trans  &trans  &trans
