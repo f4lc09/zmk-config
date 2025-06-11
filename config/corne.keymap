@@ -41,6 +41,8 @@
             label = "Z_MOUSE";
             #binding-cells = <0>;
             bindings = <&kp Z>, <&mo 9>;
+
+            tapping-term-ms = <350>;
         };
 
         shift_caps: shift_caps {
@@ -48,6 +50,8 @@
             label = "SHIFT_CAPS";
             #binding-cells = <0>;
             bindings = <&shift_toctrllayer>, <&kp CAPSLOCK>;
+
+            tapping-term-ms = <350>;
         };
     };
 
