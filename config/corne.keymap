@@ -313,7 +313,7 @@
         ctrl {
             bindings = <
 &trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &kp A   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &fast_kt_ctrl  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                                &trans  &trans  &trans    &trans  &trans  &trans
             >;
