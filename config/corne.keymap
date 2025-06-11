@@ -323,7 +323,7 @@
             bindings = <
 &trans        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&fast_kt_alt  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&fast_kt_alt  &kp Z   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                               &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
