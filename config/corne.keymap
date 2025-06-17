@@ -116,6 +116,13 @@
             bindings = <&go_error>;
             key-positions = <17 3 9>;
         };
+
+        mouse {
+            bindings = <&mo 9>;
+            key-positions = <13 38>;
+            slow-release;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -242,10 +249,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp TAB      &kp Q     &kp W  &kp E        &kp R             &kp T        &kp Y          &kp U         &kp I      &kp O    &kp P     &kp ESCAPE
-&kp LS(TAB)  &kp A     &kp S  &kp D        &kp F             &kp G        &kp H          &kp J         &kp K      &kp L    &kp SEMI  &kp ENTER
-&mo 3        &z_mouse  &kp X  &kp C        &kp V             &kp B        &kp N          &kp M         &kp COMMA  &kp DOT  &kp FSLH  &ch_lang
-                              &shift_caps  &ctrl_toaltlayer  &kp SPACE    &kp BACKSPACE  &lt 1 DELETE  &mo 2
+&kp TAB      &kp Q  &kp W  &kp E        &kp R             &kp T        &kp Y          &kp U         &kp I      &kp O    &kp P     &kp ESCAPE
+&kp LS(TAB)  &kp A  &kp S  &kp D        &kp F             &kp G        &kp H          &kp J         &kp K      &kp L    &kp SEMI  &kp ENTER
+&mo 3        &kp Z  &kp X  &kp C        &kp V             &kp B        &kp N          &kp M         &kp COMMA  &kp DOT  &kp FSLH  &ch_lang
+                           &shift_caps  &ctrl_toaltlayer  &kp SPACE    &kp BACKSPACE  &lt 1 DELETE  &mo 2
             >;
         };
 
