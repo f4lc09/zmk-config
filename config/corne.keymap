@@ -228,7 +228,7 @@
         go_error: go_error {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp I &kp F &kp SPACE &kp E &kp R &kp R &kp SPACE &kp EXCL &kp EQUAL &kp SPACE &kp N &kp I &kp L &kp SPACE &kp RBKT &kp RET>;
+            bindings = <&none &kp I &kp F &kp SPACE &kp E &kp R &kp R &kp SPACE &kp EXCL &kp EQUAL &kp SPACE &kp N &kp I &kp L &kp SPACE &kp LEFT_BRACE &kp RET>;
             label = "GO_ERROR";
         };
     };
