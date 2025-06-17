@@ -267,19 +267,19 @@
             //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
 
             bindings = <
-&trans  &kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp GRAVE      &kp CARET         &kp AMPERSAND      &kp STAR        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans  &kp N1     &kp N2    &kp N3     &kp N4     &kp N5         &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9          &kp NUMBER_0           &kp SINGLE_QUOTE
-&trans  &kp MINUS  &kp PLUS  &kp UNDER  &kp EQUAL  &kp PERCENT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH          &trans
-                             &trans     &trans     &trans         &trans            &trans             &trans
+&trans  &kp EXCL   &kp AT    &kp HASH      &kp DLLR   &kp GRAVE      &kp CARET         &kp AMPERSAND      &kp STAR        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &kp N1     &kp N2    &kp N3        &kp N4     &kp N5         &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9          &kp NUMBER_0           &kp SINGLE_QUOTE
+&trans  &kp MINUS  &kp PLUS  &kp UNDER     &kp EQUAL  &kp PERCENT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH          &trans
+                             &kp LEFT_ALT  &trans     &trans         &trans            &trans             &trans
             >;
         };
 
         control_keys {
             bindings = <
-&trans  &trans  &trans  &trans                  &trans               &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans                  &trans               &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans                  &trans               &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &ctrlshift_toctrllayer  &ctrlalt_toaltlayer  &kp LEFT_ALT    &trans  &trans  &trans
+&trans  &trans  &trans  &trans                  &trans               &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                  &trans               &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                  &trans               &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &ctrlshift_toctrllayer  &ctrlalt_toaltlayer  &trans    &trans  &trans  &trans
             >;
         };
 
