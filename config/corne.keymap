@@ -102,13 +102,6 @@
             layers = <0>;
         };
 
-        mouse {
-            bindings = <&mo 0>;
-            key-positions = <13 38>;
-            slow-release;
-            layers = <0>;
-        };
-
         ctrl_s {
             bindings = <&kp LC(S)>;
             key-positions = <37 14>;
@@ -117,6 +110,11 @@
         space_back {
             bindings = <&space_back>;
             key-positions = <38 39>;
+        };
+
+        go_error {
+            bindings = <&go_error>;
+            key-positions = <17 3 9>;
         };
     };
 
