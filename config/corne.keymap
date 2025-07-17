@@ -69,7 +69,7 @@
         };
 
         toggle_gaming {
-            bindings = <&tog 4>;
+            bindings = <&tog 1>;
             key-positions = <36 37 38>;
         };
 
