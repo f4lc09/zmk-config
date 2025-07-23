@@ -304,19 +304,19 @@
 
         ctrl {
             bindings = <
-&trans         &trans  &trans  &trans  &trans  &trans    &trans          &trans  &trans  &trans  &trans  &trans
-&trans         &trans  &trans  &trans  &trans  &trans    &trans          &trans  &trans  &trans  &trans  &trans
-&fast_kt_ctrl  &trans  &trans  &trans  &trans  &trans    &trans          &trans  &trans  &trans  &trans  &trans
-                               &trans  &trans  &trans    &kp LEFT_SHIFT  &trans  &trans
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&fast_kt_ctrl  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                               &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
         alt {
             bindings = <
-&trans        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&fast_kt_alt  &kp Z   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans  &trans  &trans    &trans  &trans  &trans
+&trans        &trans  &trans  &trans  &trans  &trans    &trans          &trans  &trans  &trans  &trans  &trans
+&trans        &trans  &trans  &trans  &trans  &trans    &trans          &trans  &trans  &trans  &trans  &trans
+&fast_kt_alt  &trans  &trans  &trans  &trans  &trans    &trans          &trans  &trans  &trans  &trans  &trans
+                              &trans  &trans  &trans    &kp LEFT_SHIFT  &trans  &trans
             >;
         };
 
