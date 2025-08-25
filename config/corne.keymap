@@ -40,7 +40,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Z_MOUSE";
             #binding-cells = <0>;
-            bindings = <&kp Z>, <&mo 10>;
+            bindings = <&kp Z>, <&mo 6>;
 
             tapping-term-ms = <350>;
         };
@@ -74,7 +74,7 @@
         };
 
         sticky_bluetooth {
-            bindings = <&sl 7>;
+            bindings = <&sl 5>;
             key-positions = <41 40 39>;
         };
 
@@ -89,7 +89,7 @@
         };
 
         mouse {
-            bindings = <&mo 10>;
+            bindings = <&mo 6>;
             key-positions = <13 38>;
             slow-release;
             layers = <0>;
@@ -127,10 +127,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_SHIFT &mo 8>,
+                <&kp LEFT_SHIFT &mo 0>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_SHIFT &mo 8 &kp LCTRL &kp LEFT_ALT>;
+                <&kp LEFT_SHIFT &mo 0 &kp LCTRL &kp LEFT_ALT>;
 
             label = "SHIFT_TOCTRLLAYER";
             wait-ms = <0>;
@@ -141,10 +141,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL &kp LEFT_SHIFT &mo 8>,
+                <&kp LCTRL &kp LEFT_SHIFT &mo 0>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_SHIFT &mo 8 &kp LCTRL &kp LEFT_ALT>;
+                <&kp LEFT_SHIFT &mo 0 &kp LCTRL &kp LEFT_ALT>;
 
             label = "CTRLSHIFT_TOCTRLLAYER";
             wait-ms = <0>;
@@ -155,10 +155,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL &mo 9>,
+                <&kp LCTRL &mo 0>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LCTRL &mo 9 &kp LEFT_ALT>;
+                <&kp LCTRL &mo 0 &kp LEFT_ALT>;
 
             label = "CTRL_TOALTLAYER";
             wait-ms = <0>;
@@ -169,10 +169,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL &kp LEFT_ALT &mo 9>,
+                <&kp LCTRL &kp LEFT_ALT &mo 0>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LCTRL &mo 9 &kp LEFT_ALT>;
+                <&kp LCTRL &mo 0 &kp LEFT_ALT>;
 
             label = "CTRLALT_TOALTLAYER";
             wait-ms = <0>;
@@ -220,10 +220,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp TAB      &kp Q  &kp W  &kp E               &kp R             &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P     &kp ESCAPE
-&kp LS(TAB)  &kp A  &kp S  &kp D               &kp F             &kp G        &kp H          &kp J  &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
-&mo 4        &kp Z  &kp X  &kp C               &kp V             &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo 5
-                           &shift_toctrllayer  &ctrl_toaltlayer  &kp SPACE    &kp BACKSPACE  &mo 2  &mo 3
+&kp ESCAPE     &kp Q  &kp W  &kp E           &kp R      &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P     &kp TAB
+&ch_lang       &kp A  &kp S  &kp D           &kp F      &kp G        &kp H          &kp J  &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
+&kp LS(LCTRL)  &kp Z  &kp X  &kp C           &kp V      &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_ALT
+                             &kp LEFT_SHIFT  &kp LCTRL  &kp SPACE    &kp BACKSPACE  &mo 2  &mo 3
             >;
         };
 
@@ -232,7 +232,7 @@
 &kp TAB       &kp NUMBER_1    &kp Q  &kp W  &kp E      &kp R        &trans  &trans  &trans  &trans  &trans  &trans
 &kp NUMBER_3  &kp NUMBER_2    &kp A  &kp S  &kp D      &kp F        &trans  &trans  &trans  &trans  &trans  &trans
 &kp NUMBER_4  &kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V        &trans  &trans  &trans  &trans  &trans  &trans
-                                     &mo 6  &kp LCTRL  &kp SPACE    &trans  &trans  &trans
+                                     &mo 4  &kp LCTRL  &kp SPACE    &trans  &trans  &trans
             >;
         };
 
@@ -245,7 +245,7 @@
 
             bindings = <
 &trans  &kp F1  &kp F2           &kp F3        &kp F4            &kp F5     &kp F6          &kp F7          &kp F8        &kp F9           &kp F10        &kp F11
-&trans  &mo 11  &kp PRINTSCREEN  &kp LEFT_WIN  &kp HOME          &kp END    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp PAGE_UP    &kp F12
+&trans  &mo 7   &kp PRINTSCREEN  &kp LEFT_WIN  &kp HOME          &kp END    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp PAGE_UP    &kp F12
 &trans  &trans  &trans           &trans        &kp LA(LEFT_GUI)  &trans     &trans          &trans          &trans        &trans           &kp PAGE_DOWN  &trans
                                  &trans        &trans            &trans     &trans          &trans          &trans
             >;
@@ -259,28 +259,10 @@
             //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
 
             bindings = <
-&trans  &kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp GRAVE      &kp CARET         &kp AMPERSAND      &kp STAR        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp GRAVE      &kp CARET         &kp AMPERSAND      &kp STAR        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DELETE
 &trans  &kp N1     &kp N2    &kp N3     &kp N4     &kp N5         &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9          &kp NUMBER_0           &kp ENTER
-&trans  &kp MINUS  &kp PLUS  &kp UNDER  &kp EQUAL  &kp PERCENT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH          &ch_lang
+&trans  &kp MINUS  &kp PLUS  &kp UNDER  &kp EQUAL  &kp PERCENT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH          &kp CAPS
                              &trans     &trans     &trans         &trans            &trans             &trans
-            >;
-        };
-
-        control_keys {
-            bindings = <
-&trans  &trans  &trans  &trans                  &trans               &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans                  &trans               &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans                  &trans               &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &ctrlshift_toctrllayer  &ctrlalt_toaltlayer  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        alter_keys {
-            bindings = <
-&trans  &trans  &trans  &trans        &trans  &trans    &trans      &trans        &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans  &trans    &trans      &trans        &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans  &trans    &trans      &trans        &trans    &trans  &trans  &trans
-                        &kp LEFT_ALT  &trans  &trans    &kp DELETE  &kp CAPSLOCK  &ch_lang
             >;
         };
 
@@ -302,30 +284,12 @@
             >;
         };
 
-        ctrl {
-            bindings = <
-&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&fast_kt_ctrl  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                               &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        alt {
-            bindings = <
-&trans        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&fast_kt_alt  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
         mouse {
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans     &trans     &trans    &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans     &trans     &kp LEFT_WIN    &trans  &trans  &trans
             >;
         };
 
