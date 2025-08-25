@@ -246,7 +246,7 @@
             bindings = <
 &trans  &kp F1  &kp F2           &kp F3        &kp F4            &kp F5     &kp F6          &kp F7          &kp F8        &kp F9           &kp F10  &kp PAGE_UP
 &trans  &mo 6   &kp PRINTSCREEN  &kp LEFT_WIN  &kp HOME          &kp END    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp F11  &kp PAGE_DOWN
-&trans  &trans  &trans           &trans        &kp LA(LEFT_GUI)  &trans     &trans          &trans          &kp LEFT_WIN  &trans           &kp F12  &trans
+&trans  &trans  &trans           &trans        &kp LA(LEFT_GUI)  &trans     &trans          &trans          &ch_lang      &trans           &kp F12  &trans
                                  &trans        &trans            &trans     &trans          &trans          &trans
             >;
         };
@@ -261,7 +261,7 @@
             bindings = <
 &trans  &kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp GRAVE      &kp CARET         &kp AMPERSAND      &kp STAR        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DELETE
 &trans  &kp N1     &kp N2    &kp N3     &kp N4     &kp N5         &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9          &kp NUMBER_0           &kp ENTER
-&trans  &kp MINUS  &kp PLUS  &kp UNDER  &kp EQUAL  &kp PERCENT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH          &ch_lang
+&trans  &kp MINUS  &kp PLUS  &kp UNDER  &kp EQUAL  &kp PERCENT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH          &kp CAPSLOCK
                              &trans     &trans     &trans         &trans            &trans             &trans
             >;
         };
