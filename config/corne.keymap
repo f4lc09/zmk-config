@@ -220,7 +220,7 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp TAB      &kp Q  &kp W  &kp E               &kp R             &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P     &kp ESCAPE
+&kp TAB      &kp Q  &kp W  &kp E               &kp R             &kp T        &kp Y          &kp U  &kp I      &kp O    &kp P     &kp DELETE
 &kp LS(TAB)  &kp A  &kp S  &kp D               &kp F             &kp G        &kp H          &kp J  &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
 &mo 5        &kp Z  &kp X  &kp C               &kp V             &kp B        &kp N          &kp M  &kp COMMA  &kp DOT  &kp FSLH  &ch_lang
                            &shift_toctrllayer  &ctrl_toaltlayer  &kp SPACE    &kp BACKSPACE  &mo 2  &mo 3
@@ -259,19 +259,19 @@
             //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
 
             bindings = <
-&trans  &kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp GRAVE      &kp CARET         &kp AMPERSAND      &kp STAR        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DELETE
-&trans  &kp N1     &kp N2    &kp N3     &kp N4     &kp N5         &kp NUMBER_6      &kp NUMBER_7       &kp NUMBER_8    &kp NUMBER_9          &kp NUMBER_0           &kp ENTER
-&trans  &kp MINUS  &kp PLUS  &kp UNDER  &kp EQUAL  &kp PERCENT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH          &kp CAPSLOCK
-                             &trans     &trans     &trans         &trans            &trans             &trans
+&trans  &kp EXCL          &kp AT             &kp HASH        &kp DLLR         &kp GRAVE      &kp CARET     &kp AMPERSAND  &kp STAR      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CAPSLOCK
+&trans  &kp N1            &kp N2             &kp N3          &kp N4           &kp N5         &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0           &kp ENTER
+&trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PERCENT    &kp MINUS     &kp PLUS       &kp UNDER     &kp MINUS             &kp BACKSLASH          &trans
+                                             &trans          &trans           &trans         &trans        &trans         &trans
             >;
         };
 
         ctrl_layer {
             bindings = <
-&trans     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&sk LCTRL  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans  &trans  &trans    &trans  &trans  &trans
+&kp ESCAPE  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kt LCTRL   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -279,7 +279,7 @@
             bindings = <
 &trans        &trans  &trans  &trans  &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans  &trans  &trans  &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&sk LEFT_ALT  &trans  &trans  &trans  &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kt LEFT_ALT  &trans  &trans  &trans  &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
                               &trans  &kp LEFT_ALT  &trans    &trans  &trans  &trans
             >;
         };
