@@ -225,11 +225,7 @@
         cancel_ctrl_home: cancel_ctrl_home {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_release>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp LC(HOME)>;
+            bindings = <&macro_release>, <&kp LCTRL>, <&macro_tap>, <&kp HOME>;
 
             label = "CANCEL_CTRL_HOME";
         };
@@ -237,11 +233,7 @@
         cancel_ctrl_end: cancel_ctrl_end {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_release>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp LC(END)>;
+            bindings = <&macro_release>, <&kp LCTRL>, <&macro_tap>, <&kp END>;
 
             label = "CANCEL_CTRL_END";
         };
