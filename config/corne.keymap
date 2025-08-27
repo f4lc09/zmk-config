@@ -221,6 +221,30 @@
 
             label = "CANCEL_SHIFT_ESCAPE";
         };
+
+        cancel_ctrl_home: cancel_ctrl_home {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_release>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp LC(HOME)>;
+
+            label = "CANCEL_CTRL_HOME";
+        };
+
+        cancel_ctrl_end: cancel_ctrl_end {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_release>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp LC(END)>;
+
+            label = "CANCEL_CTRL_END";
+        };
     };
 
     keymap {
@@ -258,10 +282,10 @@
             //                    |     |     |    |                  |     |     |     |
 
             bindings = <
-&kp LC(LS(ESCAPE))  &kp F1  &kp F2           &kp F3        &kp F4            &kp F5     &kp F6          &kp F7          &kp F8        &kp F9           &kp F10  &kp PAGE_UP
-&trans              &mo 8   &kp PRINTSCREEN  &kp LEFT_WIN  &kp HOME          &kp END    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp F11  &kp PAGE_DOWN
-&trans              &trans  &trans           &trans        &kp LA(LEFT_GUI)  &trans     &trans          &trans          &trans        &trans           &kp F12  &trans
-                                             &trans        &trans            &trans     &trans          &trans          &trans
+&kp LC(LS(ESCAPE))  &kp F1  &kp F2           &kp F3            &kp F4             &kp F5              &kp F6          &kp F7          &kp F8        &kp F9           &kp F10  &kp PAGE_UP
+&trans              &mo 8   &kp PRINTSCREEN  &kp LEFT_WIN      &cancel_ctrl_home  &cancel_ctrl_end    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp F11  &kp PAGE_DOWN
+&trans              &trans  &trans           &kp LA(LEFT_WIN)  &kp LC(HOME)       &kp LC(END)         &trans          &trans          &trans        &trans           &kp F12  &trans
+                                             &trans            &trans             &trans              &trans          &trans          &trans
             >;
         };
 
@@ -275,7 +299,7 @@
             bindings = <
 &trans  &kp EXCL          &kp AT             &kp HASH        &kp DLLR         &kp GRAVE      &kp CARET     &kp AMPERSAND  &kp STAR      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CAPSLOCK
 &trans  &kp N1            &kp N2             &kp N3          &kp N4           &kp N5         &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0           &kp ENTER
-&trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PERCENT    &kp MINUS     &kp PLUS       &kp UNDER     &kp MINUS             &kp BACKSLASH          &trans
+&trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PERCENT    &kp MINUS     &kp PLUS       &kp UNDER     &kp EQUAL             &kp BACKSLASH          &trans
                                              &trans          &trans           &trans         &trans        &trans         &trans
             >;
         };
