@@ -118,7 +118,12 @@
         ch_lang: change_lang {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT &kp LS(LEFT_ALT)>;
+            bindings =
+                <&macro_tap>,
+                <&kp RIGHT_ALT>,
+                <&macro_tap>,
+                <&kp LS(LEFT_ALT)>;
+
             label = "CHANGE_LANG";
         };
 
