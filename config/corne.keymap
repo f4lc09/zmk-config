@@ -453,6 +453,20 @@
             label = "CTRLALT_TO_ALT_LAYER";
             wait-ms = <0>;
         };
+
+        restore_shift_delete: restore_shift_delete {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_release>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp DELETE>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>;
+
+            label = "RESTORE_SHIFT_DELETE";
+        };
     };
 
     keymap {
@@ -514,10 +528,10 @@
 
         ctrl_layer {
             bindings = <
-&cancel_shift_escape  &trans  &trans  &trans  &trans  &trans    &trans             &trans  &trans  &trans  &trans  &trans
-&trans                &trans  &trans  &trans  &trans  &trans    &trans             &trans  &trans  &trans  &trans  &trans
-&kt LCTRL             &trans  &trans  &trans  &trans  &trans    &trans             &trans  &trans  &trans  &trans  &trans
-                                      &trans  &trans  &trans    &cancel_shift_del  &trans  &trans
+&cancel_shift_escape  &trans  &trans  &trans  &trans  &trans    &trans                 &trans  &trans  &trans  &trans  &trans
+&trans                &trans  &trans  &trans  &trans  &trans    &trans                 &trans  &trans  &trans  &trans  &trans
+&kt LCTRL             &trans  &trans  &trans  &trans  &trans    &trans                 &trans  &trans  &trans  &trans  &trans
+                                      &trans  &trans  &trans    &restore_shift_delete  &trans  &trans
             >;
         };
 
