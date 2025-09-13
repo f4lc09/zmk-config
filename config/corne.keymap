@@ -101,6 +101,11 @@
             slow-release;
             layers = <0 2 3>;
         };
+
+        gaming {
+            bindings = <&to 1>;
+            key-positions = <3 14 16>;
+        };
     };
 
     macros {
@@ -491,7 +496,7 @@
             bindings = <
 &kp TAB       &kp NUMBER_1    &kp Q  &kp W  &kp E      &kp R        &trans  &trans  &trans  &trans  &trans  &trans
 &kp NUMBER_3  &kp NUMBER_2    &kp A  &kp S  &kp D      &kp F        &trans  &trans  &trans  &trans  &trans  &trans
-&kp NUMBER_4  &kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V        &trans  &trans  &trans  &trans  &trans  &trans
+&kp NUMBER_4  &kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V        &trans  &trans  &trans  &trans  &trans  &to 0
                                      &mo 8  &kp LCTRL  &kp SPACE    &trans  &trans  &trans
             >;
         };
