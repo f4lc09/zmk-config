@@ -107,6 +107,12 @@
             key-positions = <14 15 16>;
             layers = <0>;
         };
+
+        back_from_game {
+            bindings = <&to 0>;
+            key-positions = <24 36>;
+            layers = <1>;
+        };
     };
 
     macros {
