@@ -1,0 +1,9 @@
+/ {
+    vbatt {
+        compatible = "zmk,battery-voltage";
+        io-channels = <&adc 0>;   /* АЦП канал 0, к которому подключен VBAT */
+        full-voltage = <4200>;    /* 4.2В = 100% */
+        cutoff-voltage = <3300>;  /* 3.3В = 0% */
+        status = "okay";
+    };
+};
